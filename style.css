@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(OpenSans.woff) format('woff');
+}
+
+body {
+    font-family: 'OpenSans';
+    margin: 0;
+    overflow: hidden scroll;
+    width: 100%;
+    font-size: 14px;
+}
+
+header {
+	font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(34, 34, 34, 0.99);
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    width: 80px;
+    text-align: center;
+    line-height: 40px;
+    cursor: default;
+    padding-left: 10px;
+}
+
+header ul li a {
+    margin: none;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+header ul li a:hover {
+    color: silver;
+}
+
+header ul li ul {
+    display: none;
+}
+
+header ul li:hover ul, header ul li:active ul, header ul li:focus ul {
+    display: block;
+}
+
+header ul ul li {
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 0;
+}
+
+header ul ul li:last-child {
+    border-radius: 0 0 6px 6px;
+}
+
+.current {
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 40px;
+}
+
+article:not(#slideshow-wrap) {
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding: 1px 0;
+}
+
+h1 {
+    font-size: 1.75em;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    margin-top: 1.3em;
+    margin-bottom: 0.4em;
+    color: #444;
+    font-weight: 500;
+}
+
+h3 {
+    margin-bottom: 0.3em;
+    color: #555;
+    font-weight: 500;
+}
+
+td h1, td h2, td h3 {
+    margin-bottom: 0em;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#slideshow-wrap {
+    display: block;
+    margin: auto;
+    position: relative;
+    padding: 25px 0;
+    background-color: #444;
+    width: 100%;
+    height: 200%;
+}
+
+#slideshow-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#slideshow-inner > ul {
+    list-style: none;
+    height: 100%;
+    width: 300%;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    -webkit-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    -ms-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-padding-start: 0;
+}
+
+#slideshow-inner > ul > li {
+    width: 33.33%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+#slideshow-inner > ul > li > a > img {
+    margin: auto;
+    height: 100%;
+    width: 50%;
+}
+
+#slideshow-wrap input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+#slideshow-wrap label:not(.arrows) {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    z-index: 100;
+    width: 8px;
+    height: 8px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+}
+
+#button1:checked ~ .page[for=button1], #button2:checked ~ .page[for=button2], #button3:checked ~ .page[for=button3] {
+    background-color: rgb(200, 200, 200);
+}
+
+.page[for=button1] {
+    margin-left: -15px;
+}
+
+.page[for=button3] {
+    margin-left: 15px;
+}
+
+#button1:checked ~ #slideshow-inner > ul {
+    left: 0;
+}
+
+#button2:checked ~ #slideshow-inner > ul {
+    left: -100%;
+}
+
+#button3:checked ~ #slideshow-inner > ul {
+    left: -200%;
+}
+
+.arrows {
+    font-size: 20px;
+    color: rgb(255, 255, 240);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: none;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    border: 1px solid rgba(200, 200, 200, 0.6);
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    text-align: center;
+    line-height: 2em;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+}
+
+.arrows:hover {
+    opacity: 1;
+}
+
+.arrows:active {
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+#button1:checked ~ #arrow1, #button2:checked ~ #arrow3 {
+    right: 5%;
+    display: block;
+}
+
+#button2:checked ~ #arrow2, #button3:checked ~ #arrow4 {
+    left: 5%;
+    display: block;
+}
+
+#arrow1 > i, #arrow3 > i {
+    position: relative;
+    left: 1.05px;
+}
+
+.small {
+    display: none;
+}
+
+.text {
+    padding: 0 1%;
+}
+
+@media screen and (max-width: 640px) {
+	header {
+		font-size: 12px;
+	}
+
+    td h1, td h2, td h3 {
+        margin-bottom: 0;
+    }
+
+    .responsive td {
+        display: block;
+        width: 100%;
+    }
+
+    .empty {
+        display: none;
+    }
+
+    .small {
+        display: inline-block;
+    }
+
+    .big {
+        display: none !important;
+    }
+
+    .text {
+        padding: 0;
+    }
+
+    #slideshow-inner > ul > li > a > img {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
