@@ -267,6 +267,44 @@ footer {
 
 .text {
     padding: 0 1%;
+    overflow: visible;
+}
+
+.text h2, .text h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.scroll {
+    padding: 0;
+    overflow-x: scroll;
+    text-align: left;
+    background-color: #F5F5F5;
+    padding: 10px;
+}
+
+.scroll div {
+    width: 1350px;
+    padding-bottom: 0;
+}
+
+.scroll::-webkit-scrollbar {
+    height: 7px;
+    width: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.scroll img {
+    box-shadow: 0 0 8px gray;
+}
+
+.scroll img + img {
+    margin-left: 20px;
 }
 
 @media screen and (max-width: 640px) {
