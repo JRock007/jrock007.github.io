@@ -1,0 +1,494 @@
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(Nunito-vietnamese.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(Nunito-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(Nunito-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: rgb(78, 113, 127);
+    font-family: Nunito;
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+a {
+    color: rgb(78, 113, 127);
+}
+
+header section {
+    position: relative;
+    height: 50px;
+}
+
+header h1, header h2 {
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+header h1 {
+    margin-left: 5%;
+    font-size: 200%;
+}
+
+header h2 {
+    margin-right: 3%;
+    float: right;
+    top: 60px;
+}
+
+header h2 br {
+    display: none;
+}
+
+header h2 br + a {
+    margin-left: 15px;
+}
+
+header h2 a {
+    text-decoration: none;
+}
+
+header h1 i, header h2 i {
+    font-style: normal;
+}
+
+header div {
+    width: 100%;
+    background-color: rgb(78, 113, 127);
+    color: white;
+    height: 36px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+header div table {
+    width: 75%;
+    height: 36px;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+header div td {
+    text-align: center;
+    padding: 0;
+    height: 36px;
+    vertical-align: middle;
+    min-width: 50px;
+    padding: 0;
+}
+
+header div .fa {
+    font-size: 120%;
+}
+
+header div td:first-child, header div td:last-child {
+    font-size: 125%;
+    line-height: 38px;
+}
+
+header div a {
+    padding: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    line-height: 36px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-image .5s;
+}
+
+header div a:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+}
+
+header div i {
+    font-style: normal;
+}
+
+header div i + i, header div i + i:before {
+    display: none;
+}
+
+header.fixed section {
+    border-bottom: 36px solid rgb(78, 113, 127);
+}
+
+header.fixed div {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header img {
+    width: 100%;
+    height: 33.33vw;
+}
+
+article.slider {
+    width: 100%;
+    height: 33.33vw;
+    margin: 0;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.slider section {
+    width: 400%;
+    height: 100%;
+    transition: margin-left 1s ease-out;
+}
+
+.slider div {
+    display: inline-block;
+    z-index: -1;
+    width: 25%;
+    height: 100%;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.slider section label {
+    text-shadow: 0 0 3px black;
+    color: white;
+    position: absolute;
+    top: 50%;
+    margin-top: -2vw;
+    padding: 0 1vw;
+    font-size: 3vw;
+    cursor: pointer;
+    transition: opacity .5s;
+    opacity: 0.6;
+}
+
+.slider section label:hover {
+    opacity: 1;
+}
+
+.slider section label:first-child {
+    left: 2%;
+}
+
+.slider section label:last-child {
+    right: 2%;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.slider input[type="radio"] + label {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    bottom: -5%;
+    width: 0.6vw;
+    height: 0.6vw;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: rgb(153, 153, 153);
+    border-radius: 50%;
+    transition: background-color .3s, border-color .3s;
+}
+
+.slider input[type="radio"] + label:hover {
+    background-color: rgb(102, 102, 102);
+}
+
+.slider input[type="radio"]:checked + label {
+    background-color: white;
+    border-color: rgb(78, 113, 127);
+    cursor: default;
+}
+
+.slider input#btn1 + label {
+    left: 47.9%;
+}
+
+.slider input#btn2 + label {
+    left: 49.3%;
+}
+
+.slider input#btn3 + label {
+    left: 50.7%;
+}
+
+.slider input#btn4 + label {
+    left: 52.1%;
+}
+
+.slider #btn1:checked ~ section {
+    margin-left: 0;
+}
+
+.slider #btn2:checked ~ section {
+    margin-left: -100%;
+}
+
+.slider #btn3:checked ~ section {
+    margin-left: -200%;
+}
+
+.slider #btn4:checked ~ section {
+    margin-left: -300%;
+}
+
+.slider #btn1:checked ~ section label:not(.slide1 label), .slider #btn2:checked ~ section label:not(.slide2 label), .slider #btn3:checked ~ section label:not(.slide3 label), .slider #btn4:checked ~ section label:not(.slide4 label) {
+    display: none;
+}
+
+body > section {
+    margin: 0 5%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+body > section h2 {
+    font-weight: 400;
+}
+
+body > section h3 {
+    margin: 15px 0 10px 0;
+}
+
+body > section h2 i {
+    cursor: pointer;
+}
+
+body > section > p {
+    text-align: justify;
+}
+
+body > section > p img {
+    float: left;
+    max-width: 8%;
+    margin: 0 30px 20px 0;
+}
+
+body > section table {
+    width: 80%;
+    margin: 0 10%;
+}
+
+body > section td {
+    width: 33.333%;
+    vertical-align: top;
+}
+
+body > section td p {
+    text-align: justify;
+}
+
+body > section table h2, body > section table p {
+    width: 75%;
+    margin: auto;
+}
+
+body > section table p {
+    font-size: 1.25vw;
+}
+
+body > section table.symptomes {
+    margin: 0;
+    width: 100%;
+}
+
+body > section table.symptomes th {
+    text-align: left;
+    padding-left: 30%;
+    padding-bottom: 20px;
+}
+
+body > section table.symptomes td:first-child {
+    width: 13%;
+}
+
+body > section table.symptomes td:last-child {
+    text-align: justify;
+}
+
+body > section table img {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 0 12px -6px rgb(78, 113, 127);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    background: rgb(78, 113, 127);
+    color: white;
+    font-size: 12px;
+}
+
+footer a {
+    color: white;
+}
+
+@media screen and (max-device-width: 1350px), screen and (max-width: 1350px) {
+    header section {
+        height: 100px;
+    }
+    header h1, header h2 {
+        font-size: 25px;
+    }
+    header h1 {
+        margin-top: 10px;
+        font-size: calc(2vw + 16px);
+    }
+    header h1 a {
+        display: block;
+        font-size: 0;
+        height: 0;
+    }
+    header h1 i {
+        position: relative;
+        font-size: calc(1vw + 16px);
+        top: -15px;
+    }
+    header h2 {
+        text-align: right;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        font-size: calc(1vw + 16px);
+        line-height: 35px;
+    }
+    header h2 br {
+        display: inline;
+    }
+    header div i {
+        display: none
+    }
+    header div i + i, header div i + i:before {
+        display: inline;
+    }
+    header div .fa {
+        font-size: 25px;
+        line-height: 36px;
+    }
+    header div .fa-briefcase {
+        line-height: 40px;
+    }
+    header div td:first-child .fa {
+        font-size: 28px;
+    }
+    header div td i img {
+        margin-top: 4px;
+        height: 28px;
+        width: 28px;
+    }
+}
+
+@media screen and (max-device-width: 1000px), screen and (max-width: 1000px) {
+    header h1 a {
+        display: none;
+    }
+    header h1 i {
+        position: unset;
+        display: block;
+        font-size: calc(1vw + 16px);
+        margin-top: -15px;
+        top: unset;
+    }
+    header h1 i + i {
+        display: none;
+    }
+}
+
+@media screen and (max-device-width: 900px), screen and (max-width: 900px) {
+    article.slider {
+        margin-bottom: 0;
+    }
+    .slider input[type="radio"] + label {
+        display: none;
+    }
+    .slider section label {
+        font-size: calc(2vw + 16px);
+        margin-top: calc(-1vw + -16px);
+    }
+    body > section h2 br, body > section h2 i:before {
+        display: none;
+    }
+    body > section {
+        margin: 0 calc(1vw + 16px);
+        text-align: justify;
+        font-size: calc(1vw + 12px);
+    }
+    body > section h2, body > section h2 {
+        font-weight: bold;
+        text-align: center;
+        font-size: calc(1vw + 16px);
+    }
+    body > section p br {
+        display: none;
+    }
+    body > section table {
+        width: 100%;
+        margin: 0;
+    }
+    body > section td {
+        margin: auto;
+        width: 80vw;
+        max-width: 600px;
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    body > section td:first-child {
+        margin-top: 30px;
+    }
+    body > section td p {
+        font-size: calc(1vw + 12px);
+    }
+    body > section table.symptomes td:first-child {
+        display: none;
+    }
+    body > section table.symptomes td:last-child {
+        margin-top: 0;
+    }
+    footer {
+        font-size: calc(.5vw + 6px);
+    }
+}
+
+@media screen and (max-device-width: 700px), screen and (max-width: 700px) {
+    header h2 a {
+        font-size: 0px;
+    }
+    header h2 a .fa {
+        font-size: calc(1vw + 16px);
+    }
+}
