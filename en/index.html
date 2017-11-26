@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <title>Jean-Romain Garnier</title>
     </head>
-    <body onscroll="document.getElementsByTagName('header')[0].className=window.scrollY>50 && $('header section').css('height')!='80px'?'fixed':null">
+    <body onscroll="document.getElementsByTagName('header')[0].className=window.scrollY>(window.innerWidth>900?50:80)&&$('header section').css('height')!='80px'?'fixed':null">
         <header>
             <h1>Jean-Romain Garnier <i>CentraleSupélec student &amp; software developer</i></h1>
             <div>
