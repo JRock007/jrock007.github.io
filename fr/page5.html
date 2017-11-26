@@ -7,86 +7,22 @@
         <link rel="stylesheet" href="../style.css" />
         <link rel="stylesheet" href="../fontawesome.css" />
         <script src="../jquery.js"></script>
-        <script>
-            var intval = setInterval(nextpage, 4000);
-            $(document).ready(function () {
-                $htmlbody = $("html, body");
-                $(".fa.fa-angle-down").on("click", function (e) {
-                    e.preventDefault();
-
-                    $htmlbody.animate({
-                        "scrollTop": $("body > section").offset().top-60
-                    }, 300, "swing");
-                });
-
-                $(".slide1").on("swiperight", function () {
-                    $("#btn4").click();
-                }).on("swipeleft", function () {
-                    $("#btn2").click();
-                });
-                $(".slide2").on("swiperight", function () {
-                    $("#btn1").click();
-                }).on("swipeleft", function () {
-                    $("#btn3").click();
-                });
-                $(".slide3").on("swiperight", function () {
-                    $("#btn2").click();
-                }).on("swipeleft", function () {
-                    $("#btn4").click();
-                });
-                $(".slide4").on("swiperight", function () {
-                    $("#btn3").click();
-                }).on("swipeleft", function () {
-                    $("#btn1").click();
-                });
-
-                $("#btn1, #btn2, #btn3, #btn4").on("change", function () {
-                    clearInterval(intval);
-                    intval = setInterval(nextpage, 4000);
-                });
-            });
-            $(document).on("mobileinit", function () {
-                $.extend($.mobile, {
-                    autoInitializePage: false
-                });
-            });
-
-            function nextpage () {
-                if ($("#btn1").is(":checked")) $("#btn2").click();
-                else if ($("#btn2").is(":checked")) $("#btn3").click();
-                else if ($("#btn3").is(":checked")) $("#btn4").click();
-                else if ($("#btn4").is(":checked")) $("#btn1").click();
-            }
-
-            // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            // ga('create', 'UA-79674303-1', 'auto');
-            // ga('send', 'pageview');
-        </script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+        <script src="../jscript.js"></script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <title>Jean-Romain Garnier</title>
     </head>
-    <body onscroll="document.getElementsByTagName('header')[0].className=window.scrollY>50 && $('header section').css('height')!='100px'?'fixed':null">
+    <body onscroll="document.getElementsByTagName('header')[0].className=window.scrollY>50 && $('header section').css('height')!='80px'?'fixed':null">
         <header>
-            <section>
-                <h1>Jean-Romain Garnier<a> – </a><i>Élève de CentraleSupélec</i><i> &amp; développeur informatique</i></h1>
-                <h2>
-                    <a href="tel:+33123456789"><i class="fa fa-phone"></i> +33 1 23 45 67 89</a><br/>
-                    <a href="mailto:contact@jean-romain.com"><i class="fa fa-envelope"></i> contact@jean-romain.com</a><br/>
-                </h2>
-            </section>
+            <h1>Jean-Romain Garnier <i>Élève de CentraleSupélec &amp; développeur informatique</i></h1>
             <div>
                 <table><tr>
-                    <td title="Accueil"><a href="./index.html"><i class="fa fa-home"></i></a>
-                    <td title="Lorem Ipsum"><a href="./page2.html"><i>Lorem Ipsum</i><i class="fa fa-pie-chart"></i></a>
-                    <td title="Dolor Sit Amet"><a href="./page3.html"><i>Dolor Sit Amet</i><i class="fa fa-gamepad"></i></a>
-                    <td title="Consectetur Adipisicing Elit"><a href="./page4.html"><i>Consectetur Adipisicing Elit</i><i class="fa fa-rocket"></i></a>
-                    <td title="Contact"><a href="./page5.html"><i class="fa fa-envelope"></i></a>
-                    <td title="English"><a href="../en/page5.html"><i class="fa fa-globe"></i></a>
+                    <td title="Accueil"><a href="./index.html"><i class="fa fa-home"></i></a></td>
+                    <td title="Lorem Ipsum"><a href="./page2.html"><i>Lorem Ipsum</i><i class="fa fa-pie-chart"></i></a></td>
+                    <td title="Dolor Sit Amet"><a href="./page3.html"><i>Dolor Sit Amet</i><i class="fa fa-gamepad"></i></a></td>
+                    <td title="Consectetur Adipisicing Elit"><a href="./page4.html"><i>Consectetur Adipisicing Elit</i><i class="fa fa-rocket"></i></a></td>
+                    <td title="Contact"><a href="./page5.html"><i class="fa fa-envelope"></i></a></td>
+                    <td title="English"><a href="../en/page5.html"><i class="fa fa-globe"></i></a></td>
                 </tr></table>
             </div>
         </header>
@@ -97,21 +33,21 @@
             <input name="slide" type="radio" id="btn4" /><label for="btn4"></label>
             <section>
                 <div class="slide1">
-                    <label for="btn4"><i class="fa fa-angle-left"></i></label>
-                    <img src="../images/slides/slide1.jpg" /></td>
+                    <!-- <label for="btn4"><i class="fa fa-angle-left"></i></label> -->
+                    <img src="../images/slides/slide1.jpg" />
                     <label for="btn2"><i class="fa fa-angle-right"></i></label>
                 </div><div class="slide2">
                     <label for="btn1"><i class="fa fa-angle-left"></i></label>
-                    <img src="../images/slides/slide2.jpg" /></td>
+                    <img src="../images/slides/slide2.jpg" />
                     <label for="btn3"><i class="fa fa-angle-right"></i></label>
                 </div><div class="slide3">
                     <label for="btn2"><i class="fa fa-angle-left"></i></label>
-                    <img src="../images/slides/slide3.jpg" /></td>
+                    <img src="../images/slides/slide3.jpg" />
                     <label for="btn4"><i class="fa fa-angle-right"></i></label>
                 </div><div class="slide4">
                     <label for="btn3"><i class="fa fa-angle-left"></i></label>
-                    <img src="../images/slides/slide4.jpg" /></td>
-                    <label for="btn1"><i class="fa fa-angle-right"></i></label>
+                    <img src="../images/slides/slide4.jpg" />
+                    <!-- <label for="btn1"><i class="fa fa-angle-right"></i></label> -->
                 </div>
             </section>
         </article>
