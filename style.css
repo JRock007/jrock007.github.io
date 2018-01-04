@@ -315,6 +315,7 @@ body > section td img {
     margin: auto;
     max-width: 100%;
     max-height: 200px;
+    border-radius: 50%;
 }
 
 body > section td hr {
@@ -418,24 +419,23 @@ footer a {
     body > section p br {
         display: none;
     }
-    /*body > section table {
-        width: 100%;
-        margin: 0;
+    body > section table {
+        border-spacing: 0;
     }
-    body > section td {
-        margin: auto;
-        width: 80vw;
-        max-width: 600px;
+    body > section td, body > section td:first-child, body > section td:last-child {
         display: block;
+        width: 100%;
+        text-align: left;
+    }
+    body > section td h1, body > section td h2, body > section td h4 {
+        line-height: unset;
+    }
+    body > section td h1 {
         text-align: center;
-        margin-top: 50px;
     }
-    body > section td:first-child {
-        margin-top: 30px;
+    body > section td h2, body > section td h4 {
+        margin: 10px 0;
     }
-    body > section td p {
-        font-size: calc(1vw + 12px);
-    }*/
     footer {
         font-size: calc(.5vw + 6px);
     }
