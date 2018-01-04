@@ -250,7 +250,7 @@ body > section {
     font-size: 1.5vw;
 }
 
-body > section h2 {
+body > section > h2 {
     font-weight: 400;
 }
 
@@ -258,7 +258,7 @@ body > section h3 {
     margin: 15px 0 10px 0;
 }
 
-body > section h2 i {
+body > section > h2 i {
     cursor: pointer;
 }
 
@@ -273,51 +273,62 @@ body > section > p img {
 }
 
 body > section table {
-    width: 80%;
-    margin: 0 10%;
+    border-spacing: 20px;
 }
 
 body > section td {
-    width: 33.333%;
     vertical-align: top;
 }
 
-body > section td p {
-    text-align: justify;
+body > section td:first-child {
+    width: 25%;
+    text-align: right;
 }
 
-body > section table h2, body > section table p {
+body > section td:last-child {
     width: 75%;
-    margin: auto;
-}
-
-body > section table p {
-    font-size: 1.25vw;
-}
-
-body > section table.symptomes {
-    margin: 0;
-    width: 100%;
-}
-
-body > section table.symptomes th {
     text-align: left;
-    padding-left: 30%;
-    padding-bottom: 20px;
+    vertical-align: middle;
+    color: black;
 }
 
-body > section table.symptomes td:first-child {
-    width: 13%;
+body > section td h1, body > section td h2, body > section td h4 {
+    margin: 0;
+    line-height: 40px;
 }
 
-body > section table.symptomes td:last-child {
-    text-align: justify;
+body > section td h1 {
+    font-size: 1.3em;
 }
 
-body > section table img {
-    width: 60%;
-    border-radius: 50%;
-    box-shadow: 0 0 12px -6px rgb(78, 113, 127);
+body > section td h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+body > section td h4 {
+    font-size: 1em;
+}
+
+body > section td img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 200px;
+}
+
+body > section td hr {
+    border: none;
+    height: 1px;
+    background: rgb(78, 113, 127);
+}
+
+body > section td p {
+    margin-top: .5em;
+}
+
+body > section td p:last-child {
+    margin-bottom: 0;
 }
 
 footer {
@@ -381,7 +392,7 @@ footer a {
         font-size: calc(2vw + 16px);
         margin-top: calc(-1vw + -16px);
     }
-    body > section h2 br, body > section h2 i:before {
+    body > section > h2 br, body > section > h2 i:before {
         display: none;
     }
     body > section {
@@ -389,15 +400,15 @@ footer a {
         text-align: justify;
         font-size: calc(1vw + 12px);
     }
-    body > section h2, body > section h2 {
-        font-weight: bold;
+    body > section > h2 {
+        font-weight: 700;
         text-align: center;
         font-size: calc(1vw + 16px);
     }
     body > section p br {
         display: none;
     }
-    body > section table {
+    /*body > section table {
         width: 100%;
         margin: 0;
     }
@@ -414,13 +425,7 @@ footer a {
     }
     body > section td p {
         font-size: calc(1vw + 12px);
-    }
-    body > section table.symptomes td:first-child {
-        display: none;
-    }
-    body > section table.symptomes td:last-child {
-        margin-top: 0;
-    }
+    }*/
     footer {
         font-size: calc(.5vw + 6px);
     }
