@@ -324,11 +324,15 @@ body > section td hr {
 }
 
 body > section td p {
-    margin-top: .5em;
+    margin-top: 0.1em;
 }
 
 body > section td p:last-child {
     margin-bottom: 0;
+}
+
+body > section td a {
+    color: black;
 }
 
 footer {
