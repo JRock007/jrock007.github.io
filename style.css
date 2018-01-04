@@ -315,7 +315,7 @@ body > section td img {
     margin: auto;
     max-width: 100%;
     max-height: 200px;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 body > section td hr {
