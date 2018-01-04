@@ -331,8 +331,14 @@ body > section td p:last-child {
     margin-bottom: 0;
 }
 
-body > section td a {
+body > section td p a, body > section td h4 a {
     color: black;
+}
+
+body > section td > a {
+    position: relative;
+	top: -5px;
+	text-decoration: none;
 }
 
 footer {
