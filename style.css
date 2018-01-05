@@ -47,7 +47,7 @@ header h1 {
 }
 
 header h1 i {
-	font-size: 80%;
+    font-size: 80%;
     font-style: normal;
     float: right;
 }
@@ -78,7 +78,7 @@ header div td {
     padding: 0;
 }
 
-header div .fa {
+header div .fa, header div .fab {
     font-size: 120%;
 }
 
@@ -179,6 +179,10 @@ article.slider {
     right: 2%;
 }
 
+.slider section label i {
+    font-size: 80%;
+}
+
 .slider input[type="radio"] {
     display: none;
 }
@@ -260,6 +264,7 @@ body > section h3 {
 
 body > section > h2 i {
     cursor: pointer;
+    font-size: 80%;
 }
 
 body > section > p {
@@ -337,9 +342,19 @@ body > section td p a, body > section td h4 a {
 }
 
 body > section td > a {
-    position: relative;
-	top: -5px;
-	text-decoration: none;
+    display: block;
+    margin-top: -0.5em;
+    text-decoration: none;
+}
+
+body > section td > a img {
+    display: inline-block;
+    margin: 0;
+    margin-left: -2px;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    height: 0.6em;
 }
 
 footer {
@@ -362,7 +377,7 @@ footer a {
         font-size: calc(1.2vw + 14px);
     }
     header h1 i {
-    	position: relative;
+        position: relative;
         display: block;
         float: none;
         top: -20px;
@@ -374,15 +389,9 @@ footer a {
     header div i + i, header div i + i:before {
         display: inline;
     }
-    header div .fa {
+    header div .fa, header div .fab {
         font-size: 25px;
         line-height: 36px;
-    }
-    header div .fa-briefcase {
-        line-height: 40px;
-    }
-    header div td:first-child .fa {
-        font-size: 28px;
     }
     header div td i img {
         margin-top: 4px;

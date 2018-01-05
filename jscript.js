@@ -3,7 +3,7 @@ $(function () {
     var interval = setInterval(nextpage, delay);
 
     var $htmlbody = $("html, body");
-    $(".fa.fa-angle-down").on("click", function (e) {
+    $(".fa.fa-chevron-down").on("click", function (e) {
         e.preventDefault();
 
         $htmlbody.animate({
