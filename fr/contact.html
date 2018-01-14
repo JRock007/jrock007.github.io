@@ -50,7 +50,7 @@
                     sendMail();
                     return false;
                 };
-                document.forms[0].innerHTML = "<input type='hidden'name='to'value='Y29udGFjdEBqZWFuLXJvbWFpbi5jb20'/><input placeholder='Intitulé'name='subject'style='margin:3px 0;width:100%;'/><textarea placeholder='Message'name='message'style='resize:vertical;width:100%;height:20em;max-height:45em;'></textarea><input type='submit'value='Envoyer'/>";
+                document.forms[0].innerHTML = "<input type='hidden'name='to'value='Y29udGFjdEBqZWFuLXJvbWFpbi5jb20'/><input placeholder='Intitulé'name='subject'style='margin:3px 0;width:100%;'/><textarea placeholder='Message'name='message'style='resize:vertical;width:100%;height:332px;max-height:45em;'></textarea><input type='submit'value='Envoyer'/>";
                 function sendMail () {
                     var a = "?subject=" + escape(document.forms[0].subject.value) + "&body=" + escape(document.forms[0].message.value);
                     window.location.href = "mailto:" + atob(document.forms[0].to.value) + a;
