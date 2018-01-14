@@ -1,347 +1,451 @@
 @font-face {
-    font-family: 'OpenSans';
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url(OpenSans.woff) format('woff');
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(Nunito-vietnamese.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
 }
 
-body {
-    font-family: 'OpenSans';
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(Nunito-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'), url(Nunito-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html, body {
     margin: 0;
-    overflow: hidden scroll;
-    width: 100%;
-    font-size: 14px;
+    padding: 0;
+    color: rgb(78, 113, 127);
+    font-family: Nunito;
+    font-size: 12px;
+    overflow-x: hidden;
 }
 
-header {
-	font-size: 14px;
+a {
+    color: rgb(78, 113, 127);
+}
+
+header h1 {
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    margin-left: 5%;
+    font-size: 200%;
+    margin-right: 3%;
+}
+
+header h1 i {
+    font-size: 80%;
+    font-style: normal;
+    float: right;
+}
+
+header div {
+    width: 100%;
+    background-color: rgb(78, 113, 127);
+    color: white;
+    height: 36px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+header div table {
+    width: 75%;
+    height: 36px;
+    margin: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+header div td {
+    text-align: center;
+    padding: 0;
+    height: 36px;
+    vertical-align: middle;
+    min-width: 50px;
+    padding: 0;
+}
+
+header div .fa, header div .fab {
+    font-size: 120%;
+}
+
+header div td:first-child, header div td:last-child {
+    font-size: 125%;
+    line-height: 38px;
+}
+
+header div a {
+    padding: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    line-height: 36px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-image .5s;
+}
+
+header div a:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+}
+
+header div i {
+    font-style: normal;
+}
+
+header div i + i, header div i + i:before {
+    display: none;
+}
+
+header.fixed h1 {
+    border-bottom: 36px solid rgb(78, 113, 127);
+}
+
+header.fixed div {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(34, 34, 34, 0.99);
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-    z-index: 999;
 }
 
-header ul {
-    padding: 0;
+header img {
+    width: 100%;
+    height: 33.33vw;
+}
+
+article.slider {
+    width: 100%;
     margin: 0;
-    list-style: none;
+    position: relative;
+    margin-bottom: 50px;
 }
 
-header ul li {
-    float: left;
-    width: 80px;
-    text-align: center;
-    line-height: 40px;
-    cursor: default;
-    padding-left: 10px;
+.slider section {
+    width: 400%;
+    height: 100%;
+    font-size: 0;
+    transition: margin-left 1s ease-out;
 }
 
-header ul li a {
-    margin: none;
-    display: block;
-    text-decoration: none;
+.slider div {
+    display: inline-block;
+    z-index: -1;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.slider section label {
+    text-shadow: 0 0 3px black;
     color: white;
-}
-
-header ul li a:hover {
-    color: silver;
-}
-
-header ul li ul {
-    display: none;
-}
-
-header ul li:hover ul, header ul li:active ul, header ul li:focus ul {
-    display: block;
-}
-
-header ul ul li {
-    background-color: rgba(34, 34, 34, 0.9);
-    padding: 0;
-}
-
-header ul ul li:last-child {
-    border-radius: 0 0 6px 6px;
-}
-
-.current {
-    text-decoration: underline;
-}
-
-section {
-    margin-top: 40px;
-}
-
-article:not(#slideshow-wrap) {
-    width: 80%;
-    margin: auto;
-    text-align: justify;
-    padding: 1px 0;
-}
-
-h1 {
-    font-size: 1.75em;
-    margin-top: 1.8em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    color: #333;
-}
-
-h2 {
-    margin-top: 1.3em;
-    margin-bottom: 0.4em;
-    color: #444;
-    font-weight: 500;
-}
-
-h3 {
-    margin-bottom: 0.3em;
-    color: #555;
-    font-weight: 500;
-}
-
-td h1, td h2, td h3 {
-    margin-bottom: 0em;
-}
-
-footer {
-    bottom: 0;
-    left: 0;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-}
-
-#slideshow-wrap {
-    display: block;
-    margin: auto;
-    position: relative;
-    padding: 25px 0;
-    background-color: #444;
-    width: 100%;
-    height: 200%;
-}
-
-#slideshow-inner {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-#slideshow-inner > ul {
-    list-style: none;
-    height: 100%;
-    width: 300%;
-    overflow: hidden;
-    position: relative;
-    left: 0;
-    -webkit-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    -moz-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    -ms-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    -o-transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-padding-start: 0;
-}
-
-#slideshow-inner > ul > li {
-    width: 33.33%;
-    float: left;
-    position: relative;
-    text-align: center;
-}
-
-#slideshow-inner > ul > li > a > img {
-    margin: auto;
-    height: 100%;
-    width: 50%;
-}
-
-#slideshow-wrap input[type=radio] {
-    position: absolute;
-    left: 50%;
-    bottom: 15px;
-    z-index: 100;
-    visibility: hidden;
-}
-
-#slideshow-wrap label:not(.arrows) {
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    z-index: 100;
-    width: 8px;
-    height: 8px;
-    background-color: rgb(100, 100, 100);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
-    -webkit-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    -ms-transition: background-color 0.2s;
-    -o-transition: background-color 0.2s;
-    transition: background-color 0.2s;
-}
-
-#button1:checked ~ .page[for=button1], #button2:checked ~ .page[for=button2], #button3:checked ~ .page[for=button3] {
-    background-color: rgb(200, 200, 200);
-}
-
-.page[for=button1] {
-    margin-left: -15px;
-}
-
-.page[for=button3] {
-    margin-left: 15px;
-}
-
-#button1:checked ~ #slideshow-inner > ul {
-    left: 0;
-}
-
-#button2:checked ~ #slideshow-inner > ul {
-    left: -100%;
-}
-
-#button3:checked ~ #slideshow-inner > ul {
-    left: -200%;
-}
-
-.arrows {
-    font-size: 20px;
-    color: rgb(255, 255, 240);
     position: absolute;
     top: 50%;
-    margin-top: -25px;
-    display: none;
-    opacity: 0.7;
+    margin-top: -2vw;
+    padding: 0 1vw;
+    font-size: 3vw;
     cursor: pointer;
-    z-index: 1000;
-    background-color: transparent;
-    border: 1px solid rgba(200, 200, 200, 0.6);
-    width: 2em;
-    height: 2em;
-    border-radius: 2em;
-    text-align: center;
-    line-height: 2em;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.8);
+    transition: opacity .5s;
+    opacity: 0.6;
 }
 
-.arrows:hover {
+.slider section label:hover {
     opacity: 1;
 }
 
-.arrows:active {
-    background-color: rgba(200, 200, 200, 0.1);
+.slider section label:first-child {
+    left: 2%;
 }
 
-#button1:checked ~ #arrow1, #button2:checked ~ #arrow3 {
-    right: 5%;
-    display: block;
+.slider section label:last-child {
+    right: 2%;
 }
 
-#button2:checked ~ #arrow2, #button3:checked ~ #arrow4 {
-    left: 5%;
-    display: block;
+.slider section label i {
+    font-size: 80%;
 }
 
-#arrow1 > i, #arrow3 > i {
-    position: relative;
-    left: 1.05px;
-}
-
-.small {
+.slider input[type="radio"] {
     display: none;
 }
 
-.text {
-    padding: 0 1%;
-    overflow: visible;
+.slider input[type="radio"] + label {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    bottom: -5%;
+    width: 0.6vw;
+    height: 0.6vw;
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: rgb(153, 153, 153);
+    border-radius: 50%;
+    transition: background-color .3s, border-color .3s;
 }
 
-.text h2, .text h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
+.slider input[type="radio"] + label:hover {
+    background-color: rgb(102, 102, 102);
 }
 
-.scroll {
-    padding: 0;
-    overflow-x: scroll;
+.slider input[type="radio"]:checked + label {
+    background-color: white;
+    border-color: rgb(78, 113, 127);
+    cursor: default;
+}
+
+.slider input#btn1 + label {
+    left: 47.9%;
+}
+
+.slider input#btn2 + label {
+    left: 49.3%;
+}
+
+.slider input#btn3 + label {
+    left: 50.7%;
+}
+
+.slider input#btn4 + label {
+    left: 52.1%;
+}
+
+.slider #btn1:checked ~ section {
+    margin-left: 0;
+}
+
+.slider #btn2:checked ~ section {
+    margin-left: -100%;
+}
+
+.slider #btn3:checked ~ section {
+    margin-left: -200%;
+}
+
+.slider #btn4:checked ~ section {
+    margin-left: -300%;
+}
+
+.slider #btn1:checked ~ section label:not(.slide1 label), .slider #btn2:checked ~ section label:not(.slide2 label), .slider #btn3:checked ~ section label:not(.slide3 label), .slider #btn4:checked ~ section label:not(.slide4 label) {
+    display: none;
+}
+
+body > section {
+    margin: 0 5%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+body > section > h2 {
+    font-weight: 400;
+}
+
+body > section h3 {
+    margin: 15px 0 10px 0;
+}
+
+body > section > h2 i {
+    cursor: pointer;
+    font-size: 80%;
+}
+
+body > section > p {
+    text-align: justify;
+}
+
+body > section > p img {
+    float: left;
+    max-width: 8%;
+    margin: 0 30px 20px 0;
+}
+
+body > section table {
+    border-spacing: 20px;
+}
+
+body > section td {
+    vertical-align: top;
+}
+
+body > section td:first-child {
+    width: 25%;
+    text-align: right;
+}
+
+body > section td:last-child {
+    width: 75%;
     text-align: left;
-    background-color: #F5F5F5;
-    padding: 10px;
+    vertical-align: middle;
+    color: black;
 }
 
-.scroll div {
-    width: 1350px;
-    padding-bottom: 0;
+body > section td h1, body > section td h2, body > section td h4 {
+    margin: 0;
+    line-height: 40px;
 }
 
-.scroll::-webkit-scrollbar {
-    height: 7px;
-    width: 7px;
+body > section td h1 {
+    font-size: 1.3em;
 }
 
-.scroll::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+body > section td h2 {
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
-.scroll img {
-    box-shadow: 0 0 8px gray;
+body > section td h4 {
+    font-size: 1em;
 }
 
-.scroll img + img {
-    margin-left: 20px;
+body > section td img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 20%;
 }
 
-@media screen and (max-width: 640px) {
-	header {
-		font-size: 12px;
-	}
+body > section td hr {
+    border: none;
+    height: 1px;
+    background: rgb(78, 113, 127);
+}
 
-    td h1, td h2, td h3 {
+body > section td p {
+    margin-top: 0.1em;
+}
+
+body > section td p:last-child {
+    margin-bottom: 0;
+}
+
+body > section td p a, body > section td h4 a {
+    color: black;
+}
+
+body > section td > a {
+    display: block;
+    margin-top: -0.5em;
+    text-decoration: none;
+}
+
+body > section td > a img {
+    display: inline-block;
+    margin: 0;
+    margin-left: -2px;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    height: 0.6em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    background: rgb(78, 113, 127);
+    color: white;
+    font-size: 12px;
+}
+
+footer a {
+    color: white;
+}
+
+@media screen and (max-device-width: 900px), screen and (max-width: 900px) {
+    header h1 {
+        height: 80px;
+        line-height: 50px;
+        font-size: calc(1.2vw + 14px);
+    }
+    header h1 i {
+        position: relative;
+        display: block;
+        float: none;
+        top: -20px;
+    }
+    header div i {
+        display: none;
+        font-size: 0;
+    }
+    header div i + i, header div i + i:before {
+        display: inline;
+    }
+    header div .fa, header div .fab {
+        font-size: 25px;
+        line-height: 36px;
+    }
+    header div td i img {
+        margin-top: 4px;
+        height: 28px;
+        width: 28px;
+    }
+    article.slider {
         margin-bottom: 0;
     }
-
-    .responsive td {
-        display: block;
-        width: 100%;
-    }
-
-    .empty {
+    .slider input[type="radio"] + label {
         display: none;
     }
-
-    .small {
-        display: inline-block;
+    .slider img {
+        width: calc(1920 / 1080 * 100%);
+        margin-left: calc((1920 / 1080 - 1) * -50%);
     }
-
-    .big {
-        display: none !important;
+    .slider section label {
+        font-size: calc(2vw + 16px);
+        margin-top: calc(-1vw + -16px);
     }
-
-    .text {
-        padding: 0;
+    body > section > h2 br, body > section > h2 i:before {
+        display: none;
     }
-
-    #slideshow-inner > ul > li > a > img {
-        width: 90%;
+    body > section {
+        margin: 0 calc(1vw + 16px);
+        text-align: justify;
+        font-size: calc(1vw + 12px);
     }
-
+    body > section > h2 {
+        font-weight: 700;
+        text-align: center;
+        font-size: calc(1vw + 16px);
+    }
+    body > section p br {
+        display: none;
+    }
+    body > section table {
+        border-spacing: 0;
+    }
+    body > section td, body > section td:first-child, body > section td:last-child {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    body > section td h1, body > section td h2, body > section td h4 {
+        line-height: unset;
+    }
+    body > section td h1 {
+        text-align: center;
+    }
+    body > section td h2, body > section td h4 {
+        margin: 10px 0;
+    }
     footer {
-        font-size: 12px;
+        font-size: calc(.5vw + 6px);
     }
 }

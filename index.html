@@ -2,105 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
-        <script src="jquery.js"></script>
-        <script src="jscript.js"></script>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="fontawesome.css" />
-        <link rel="icon" href="images/favicon.ico" />
-        <title>Jean-Romain Garnier — Home</title>
+        <meta name="keywords" content="lorem ipsum dolor sit amet consectetur adipisicing elit" />
+        <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+        <meta http-equiv="refresh" content="0;url=./en/index.html" />
+        <script>window.location = "./en/index.html";</script>
+        <title>Jean-Romain Garnier</title>
     </head>
-    <body>
-    	<header>
-			<ul>
-				<li><a href="index.html" class="current">Home</a></li>
-				<li><a href="#" onclick="return false;">Projects &#9662;</a>
-				<ul>
-					<li><a href="pages/ios.html">iOS</a></li>
-					<li><a href="pages/python.html">Python</a></li>
-				</ul></li>
-				<li><a href="pages/contact.html">Contact</a></li>
-			</ul>
-		</header>
-    	<section>
-            <article id="slideshow-wrap">
-                <input type="radio" id="button1" name="controls" onchange="nextslide()" checked /><label for="button1" class="page"></label>
-                <input type="radio" id="button2" name="controls" onchange="nextslide()" /><label for="button2" class="page"></label>
-                <input type="radio" id="button3" name="controls" onchange="nextslide()" /><label for="button3" class="page"></label>
-
-                <label for="button2" class="arrows" id="arrow1"><i class="fa fa-arrow-right"></i></label>
-                <label for="button1" class="arrows" id="arrow2"><i class="fa fa-arrow-left"></i></label>
-                <label for="button3" class="arrows" id="arrow3"><i class="fa fa-arrow-right"></i></label>
-                <label for="button2" class="arrows" id="arrow4"><i class="fa fa-arrow-left"></i></label>
-
-                <div id="slideshow-inner">
-                    <ul>
-                        <li id="slide1">
-                            <a href="pages/elogger.html"><img src="images/slides/elogger.jpg" /></a>
-                        </li>
-                        <li id="slide2">
-                            <a href="pages/librecast.html"><img src="images/slides/librecast.jpg" /></a>
-                        </li>
-                        <li id="slide3">
-                            <a href="pages/iosgames.html"><img src="images/slides/iosgames.jpg" /></a>
-                        </li>
-                    </ul>
-                </div>
-                <script>nextslide()</script>
-            </article>
-            <article>
-            	<h1>About me</h1>
-                <table>
-                    <tr><td class="empty"></td><td class="text"><h2>Who am I?</h2></td></tr>
-                    <tr class="responsive">
-                        <td><img src="images/who.png" /></td>
-                        <td class="text">
-    	                   I am a French and American citizen currently studying in France. I made my first iOS app in 2011, and made a few more since then. I especially like creating user-interfaces: my goal is to design software which improves people’s everyday life by being so intuitive that it becomes unnoticeable while still fulfilling its purpose.
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <tr><td class="text"><h2>What are my occupations?</h2></td class="empty"><td></td></tr>
-                    <tr class="responsive">
-                        <td class="small"><img src="images/skills.png" /></td>
-                        <td class="text">
-                            I develop iOS games and utility apps using Xcode. You will find in the iOS section of my projects. I also developed multi-platform python apps, which are available at <a href="http://github.com/JRock007" target="_blank">github.com/JRock007</a>. I have basic skills in html and css, as I created a website for a school project.<br/>
-                            By working on different projects, I have learned teamwork, forward planning (by setting weekly goals for the team) and organization.<br/>
-                            I also practice mountain bike, and like skiing and playing badminton.
-                        </td>
-                        <td class="big"><img src="images/skills.png" /></td>
-                    </tr>
-                </table>
-                <h1>Projects</h1>
-                <table>
-                    <tr><td class="empty"></td><td class="text"><h2>iOS</h2></td></tr>
-                    <tr class="responsive">
-                        <td><img src="images/ios.png" /></td>
-                        <td class="text">
-                            I created several iOS apps, some of which are available on the app store:<br/>
-                            • Elogger, a companion app to Elog, a multi-fluid data logger monitoring real time consumption of electricity, water… Available at <a href="http://apple.co/1aDgvfv" target="_blank">apple.co/1aDgvfv</a>.<br/>
-                            • iOS games, such as Flappy Power or Target Blaster, soon to be released on the app store.<br/>
-                            • A simple Morse app, which allows the user to send messages using the device’s flash, and to decrypt messages. It is not available for download.<br/>
-                            • A fast reader, which extracts content for a webpage and displays it like spritz (<a href="http://www.spritzinc.com" target="_blank">spritzinc.com</a>). It is not available either for download.<br/>
-                            I also developed, alongside with my brother, a native iOS framework for Convertigo’s cloud services (<a href="http://convertigo.com" target="_blank">convertigo.com</a>). It is used by important companies, such as Carrefour the world's second biggest retailer.
-                        </td>
-                    </tr>
-                </table>
-                <table>
-                    <tr><td class="text"><h2>Python</h2></td><td class="empty"></td></tr>
-                    <tr class="responsive">
-                        <td class="small"><img src="images/python.png" /></td>
-                        <td class="text">
-                            My most significant python projects are available <a href="pages/python.html">here</a>. Most of them are completed, though I am part of a 4 students team working on LibreCast, a smart client to peer-to-peer video streaming. Here are my main python projects:<br/>
-                            • Notes Maker, a simple text editor made for students who wish to take notes in class, and then convert them to fully-readable content.<br/>
-                            • Boxxy, a two-player turn-by-turn based game, where the goal is to complete squares on a 6 by 6 board. One player hosts the server, enabling multiple users to play over the network.<br/>
-                            • LibreCast, a work-in-progress client allowing users to stream video directly from a server or by using peer-to-peer technology. LibreCast protects both users and publishers’ privacy. The source code is available at <a href="http://github.com/LibreCast/LibreCast" target="_blank">github.com/LibreCast/LibreCast</a>, and you can read more about the app itself <a href="pages/librecast.html">here</a>.
-                        </td>
-                        <td class="big"><img src="images/python.png" /></td>
-                    </tr>
-                </table>
-            </article>
-    	</section>
-    	<footer>Copyright &copy; Jean-Romain Garnier 2015. All rights reserved.</footer>
-    </body>
+    <body></body>
 </html>
