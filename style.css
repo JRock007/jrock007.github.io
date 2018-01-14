@@ -248,6 +248,10 @@ article.slider {
     display: none;
 }
 
+.highres {
+    display: none;
+}
+
 body > section {
     margin: 0 5%;
     text-align: center;

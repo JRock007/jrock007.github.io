@@ -1,9 +1,9 @@
-$(function () {
+$(function() {
     var delay = 8000;
     var interval = setInterval(nextpage, delay);
 
     var $htmlbody = $("html, body");
-    $(".fa.fa-chevron-down").on("click", function (e) {
+    $(".fa.fa-chevron-down").on("click", function(e) {
         e.preventDefault();
 
         $htmlbody.animate({
@@ -11,28 +11,40 @@ $(function () {
         }, 300, "swing");
     });
 
-    // $(".slide1").on("swiperight", function () {
+    $("img[data-img]:not(.highres)").on("load", function() {
+        var $img = $(this);
+        var img = $img.data("img");
+        var $highres = $("img[data-img=" + img + "].highres");
+        var src = $highres.data("src");
+        $highres.on("load", function() {
+            $img.attr("src", src);
+            $highres.remove();
+        });
+        $highres.attr("src", src);
+    });
+
+    // $(".slide1").on("swiperight", function() {
     //     $("#btn4").click();
-    // }).on("swipeleft", function () {
+    // }).on("swipeleft", function() {
     //     $("#btn2").click();
     // });
-    // $(".slide2").on("swiperight", function () {
+    // $(".slide2").on("swiperight", function() {
     //     $("#btn1").click();
-    // }).on("swipeleft", function () {
+    // }).on("swipeleft", function() {
     //     $("#btn3").click();
     // });
-    // $(".slide3").on("swiperight", function () {
+    // $(".slide3").on("swiperight", function() {
     //     $("#btn2").click();
-    // }).on("swipeleft", function () {
+    // }).on("swipeleft", function() {
     //     $("#btn4").click();
     // });
-    // $(".slide4").on("swiperight", function () {
+    // $(".slide4").on("swiperight", function() {
     //     $("#btn3").click();
-    // }).on("swipeleft", function () {
+    // }).on("swipeleft", function() {
     //     $("#btn1").click();
     // });
 
-    $("#btn1, #btn2, #btn3, #btn4").on("change", function () {
+    $("#btn1, #btn2, #btn3, #btn4").on("change", function() {
         if (interval != null) {
             clearInterval(interval);
             interval = null;
@@ -178,7 +190,7 @@ $(function () {
     // ga('send', 'pageview');
 });
 
-// $(document).on("mobileinit", function () {
+// $(document).on("mobileinit", function() {
 //     $.extend($.mobile, {
 //         autoInitializePage: false
 //     });
