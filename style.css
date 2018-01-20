@@ -190,11 +190,12 @@ article.slider {
 .slider input[type="radio"] + label {
     content: "";
     position: absolute;
+    left: 50%;
     z-index: 1;
     display: inline-block;
-    bottom: -5%;
-    width: 0.6vw;
-    height: 0.6vw;
+    bottom: -25px;
+    width: 10px;
+    height: 10px;
     cursor: pointer;
     border: 1px solid transparent;
     background-color: rgb(153, 153, 153);
@@ -213,19 +214,19 @@ article.slider {
 }
 
 .slider input#btn1 + label {
-    left: 47.9%;
+    margin-left: -33px;
 }
 
 .slider input#btn2 + label {
-    left: 49.3%;
+    margin-left: -15px;
 }
 
 .slider input#btn3 + label {
-    left: 50.7%;
+    margin-left: 3px;
 }
 
 .slider input#btn4 + label {
-    left: 52.1%;
+    margin-left: 21px;
 }
 
 .slider #btn1:checked ~ section {
@@ -245,6 +246,10 @@ article.slider {
 }
 
 .slider #btn1:checked ~ section label:not(.slide1 label), .slider #btn2:checked ~ section label:not(.slide2 label), .slider #btn3:checked ~ section label:not(.slide3 label), .slider #btn4:checked ~ section label:not(.slide4 label) {
+    display: none;
+}
+
+.highres {
     display: none;
 }
 
